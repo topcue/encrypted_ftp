@@ -11,19 +11,19 @@ O3 = util
 
 all: $S $C
 
-%.o: %.c
+%.o: src/%.c
 	@echo "##### build object file"
 	$(CC) -c $(INC) $<
 
-$S: $S.c ${O1}.o ${O2}.o ${O3}.o
+$S: src/$S.c src/${O1}.o src/${O2}.o src/${O3}.o
 	@echo "##### [*] build server"
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-$C: $C.c ${O1}.o ${O2}.o ${O3}.o
+$C: src/$C.c src/${O1}.o src/${O2}.o src/${O3}.o
 	@echo "##### [*] build client"
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 clean:
-	@rm -rf *.o
+	@rm -rf src/*.o $S $C
 
 # EOF

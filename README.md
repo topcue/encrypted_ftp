@@ -1,24 +1,32 @@
-# encrypted_ftp
+# FTP with Encryption
 
-## install openssl
+## Index
 
-```
-//  Download openssl using a web browser
-tar -xzvf openssl-x.x.x.tar.gz
-```
-```
-cd ./openssl-*
-./config
-make
-make test
-sudo make install
-```
-```
-sudo ln -s /usr/local/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so
-sudo ln -s /usr/local/lib/libssl.so.1.1 /usr/lib/libssl.so
-sudo ln -s /usr/local/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
-sudo ln -s /usr/local/lib/libssl.so.1.1 /usr/lib/libssl.so.1.1
-```
-```
-openssl version
-```
+  - [Overview](#overview) 
+  - [Getting Started](#getting-started)
+
+## Overview
+
+- FTP program that provides encryption.
+
+## Getting Started
+
+### Depencies
+
+- OpenSSL install
+
+  ```
+  ## 
+  cd ftp-encrypt
+  wget https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_1_1l.tar.gz
+  tar -zvxf OpenSSL_1_1_1l.tar.gz
+  
+  rm OpenSSL_1_1_1l.tar.gz && mv openssl-OpenSSL_1_1_1l openssl
+  cd openssl
+  
+  ## build & install
+  ./config
+  make
+  make test
+  sudo make install
+  ```

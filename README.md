@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-### Depencies
+### Dependencies
 
 - OpenSSL install
 
